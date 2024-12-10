@@ -1,0 +1,48 @@
+#2
+def f(n, a):
+    total= sum(a)
+
+    for requests in a:
+        presses = n+1
+        total_presses = presses + (total - requests)
+    return total_presses
+
+
+
+
+n = int(input())
+a = [int(input()) for i in range(n)]
+
+result = f(n, a)
+print(result)
+#3
+P = int(input())
+Q = int(input())
+cnt = 0
+for a in range(P, Q + 1):
+    for b in range(a, Q + 1):
+        for c in range(b, Q + 1):
+            if a + b > c and c + b > a and a + c > b :
+                cnt += 1
+
+
+
+
+
+print(cnt)
+#5
+t=int(input())
+n=int(input())
+a=[]
+d=[]
+for i in range(t):
+    for i in range(t):
+        a.append(int(input()))
+    for i in range(n):
+        d[i + 1] = int(input())
+
+    if n == 1:
+        print(t - a[1] + 1)
+    else:
+        print(2)
+
